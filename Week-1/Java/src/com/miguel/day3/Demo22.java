@@ -20,9 +20,9 @@ public class Demo22 {
             int c = 20/0;
             System.out.println(c);
         }
-        catch (Exception ex){
-            System.out.println(ex.getMessage());
-        }
+//        catch (Exception ex){
+//            System.out.println(ex.getMessage());
+//        }
         finally {
             System.out.println("Case 2: finally called");
         }
