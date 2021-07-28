@@ -9,7 +9,7 @@ public class Demo28 {
     public static void main(String[] args) {
         BufferedReader bufferedReader = null;
         try {
-            bufferedReader = new BufferedReader(new FileReader("D:\\data.txt"));
+            bufferedReader = new BufferedReader(new FileReader("E:\\projects\\Revature\\210712-Revature\\Week-1\\Java\\src\\com\\miguel\\day3\\data.txt"));
             System.out.println(bufferedReader.readLine());
 
         } catch (FileNotFoundException e) {
