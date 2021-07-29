@@ -1,8 +1,7 @@
 package com.miguel.Day4;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
+import java.util.function.BiConsumer;
 
 public class Assign {
     public static void main(String[] args) {
@@ -55,7 +54,7 @@ public class Assign {
         });
 
 //      9.
-        ArrayList<String>anotherArrayList = (ArrayList<String>)colors.clone();
+        ArrayList<String> anotherArrayList = (ArrayList<String>) colors.clone();
 //                new ArrayList<>(colors);
 //        ArrayList anotherArrayList = colors;
 //        anotherArrayList.addAll(colors);
@@ -84,6 +83,27 @@ public class Assign {
         Collections.swap(colors,0,3);
         System.out.println("\nAfter the swap:");
         colors.forEach(System.out::println);
+        //Maps
+//      1.
+        Map<Integer,String> colorMap = new HashMap<>();
+        for(int i =0;i<4;i++){
+            colorMap.put(i,colors.get(i));
+        }
+
+        System.out.println("\n The key and values for my ");
+
+        colorMap.forEach((integer, color) -> {
+            System.out.println(integer + " " + color );
+        });
+
+//      2.
+        System.out.println("\nThe size of the map: " +colorMap.size());
+          
+//      3.
+        HashMap anotherMap = new HashMap(colorMap);
+        System.out.println("\nThe original list " + colorMap.toString()+"\n"
+                +"The copy " + anotherMap.toString()+"\n");
     }
 
 }
+
