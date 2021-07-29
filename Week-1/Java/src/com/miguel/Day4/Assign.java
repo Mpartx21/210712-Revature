@@ -79,15 +79,11 @@ public class Assign {
         extractedColors.forEach(System.out::println);
 
 //      13.
-        System.out.println("\nBefore the Swap");
+        System.out.println("\nBefore the Swap:");
         colors.forEach(System.out::println);
         Collections.swap(colors,0,3);
-        System.out.println("After the swap\n");
+        System.out.println("\nAfter the swap:");
         colors.forEach(System.out::println);
-
-
-
-
     }
 
 }
