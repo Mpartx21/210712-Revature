@@ -18,8 +18,11 @@ public class Assignment2 {
         myLinkedList.add("six\n");
 
 //2. Write a Java program to iterate through all elements in a linked list.
+        System.out.println("\nIterating through all the elements");
         myLinkedList.forEach(System.out::println);
 //3. Write a Java program to iterate through all elements in a linked list starting at the specified position.
+
+        System.out.println("\nIterating through all the elements starting at 2");
         Iterator<String> i = myLinkedList.listIterator(2);
         while(i.hasNext()){
             System.out.println(i.next());
@@ -42,6 +45,7 @@ public class Assignment2 {
         myHashset.add("five");
         myHashset.add("six\n");
 //2. Write a Java program to iterate through all elements in a hash list.
+        System.out.println("\nIterating through all the elements");
         myHashset.forEach(System.out::println);
 //3. Write a Java program to get the number of elements in a hash set.
         System.out.println("The number of elements in myHashSet:"+myHashset.size()+"\n");
@@ -60,6 +64,7 @@ public class Assignment2 {
         myTreeSet.add("Black");
         myTreeSet.forEach(System.out::println);
 //2. Write a Java program to iterate through all elements in a tree set.
+        System.out.println("\nIterating through all the elements");
         for (String color:myTreeSet){
             System.out.println(color);
         }
