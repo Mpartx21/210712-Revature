@@ -1,4 +1,4 @@
-package com.miguel.Day4;
+package com.miguel.assignments;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -69,7 +69,7 @@ public class Assignment2 {
             System.out.println(color);
         }
 //3. Write a Java program to add all the elements of a specified tree set to another tree set.
-        TreeSet<String> myOtherTreeSet = (TreeSet<String>)myTreeSet.clone();
+        TreeSet<String> myOtherTreeSet   = (TreeSet<String>)myTreeSet.clone();
         System.out.println("\nThe original list " + myTreeSet.toString()+"\n"
                 +"The copy " + myOtherTreeSet.toString()+"\n");
 //4. Write a Java program to create a reverse order view of the elements contained in a given tree set.

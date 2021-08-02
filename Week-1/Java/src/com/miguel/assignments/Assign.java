@@ -1,4 +1,4 @@
-package com.miguel.Day4;
+package com.miguel.assignments;
 
 import java.util.*;
 import java.util.function.BiConsumer;
