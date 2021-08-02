@@ -1,31 +1,34 @@
 package com.miguel.assignments.emi;
 
 public class User {
-    private float loanAmount;
-    private float returnOfInterest;
-    private float tenure;
+    private double loanAmount;
+    private double rateOfInterest;
+    private double years;
 
-    public float getLoanAmount() {
+
+    public double getLoanAmount() {
         return loanAmount;
     }
 
-    public void setLoanAmount(float loanAmount) {
+    public void setLoanAmount(double loanAmount) {
         this.loanAmount = loanAmount;
     }
 
-    public float getReturnOfInterest() {
-        return returnOfInterest;
+    public double getRateOfInterest() {
+        return rateOfInterest;
     }
 
-    public void setReturnOfInterest(float returnOfInterest) {
-        this.returnOfInterest = returnOfInterest;
+    public void setRateOfInterest(double rateOfInterest) {
+        rateOfInterest = rateOfInterest/(12*100);
+        this.rateOfInterest = rateOfInterest;
     }
 
-    public float getTenure() {
-        return tenure;
+    public double getYears() {
+        return years;
     }
 
-    public void setTenure(float tenure) {
-        this.tenure = tenure;
+    public void setYears(double years) {
+        years = years*12;
+        this.years = years;
     }
 }
