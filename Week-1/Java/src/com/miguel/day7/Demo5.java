@@ -31,7 +31,6 @@ public class Demo5 {
         System.out.println("**************");
         Arrays.stream(intArray).forEach(num -> {
             System.out.println(num);
-
         });
 
     }
