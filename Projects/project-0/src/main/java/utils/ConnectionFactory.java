@@ -1,14 +1,15 @@
-package Utils;
+package utils;
 
-import java.io.FileReader;
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.Properties;
 
 public class ConnectionFactory {
-    private static ConnectionFactory connectionFactory = new ConnectionFactory();
+    private final String url = "jdbc:mysql://localhost:3306/revature";
+    private final String userName ="root";
+    private final String passWord = "password";
+
+    private static final ConnectionFactory connectionFactory = new ConnectionFactory();
 
     public static ConnectionFactory getInstance(){
         return connectionFactory;
@@ -19,7 +20,7 @@ public class ConnectionFactory {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/revature", "root", "password");
+            connection = DriverManager.getConnection(url,userName,passWord);
 
         }catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
