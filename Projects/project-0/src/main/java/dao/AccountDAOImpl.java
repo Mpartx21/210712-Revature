@@ -1,11 +1,19 @@
 package dao;
 
-import models.Account;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 
 public class AccountDAOImpl implements AccountDAO {
+
+    private static PreparedStatement preparedStatement = null;
+    private static Connection connection = null;
+
+    public AccountDAOImpl() {
+        this.connection = ConnectionFac
+    }
 
     @Override
     public void addAccount(Account account) throws SQLException {
