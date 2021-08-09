@@ -1,14 +1,21 @@
-package models;
+package com.revature.models;
 
 public class Account {
     private Integer id;
-    private String account_name;
     private double balance;
+    private AccountTypes types;
 
-    public Account(Integer id, String account_name, double balance) {
-        this.id = id;
-        this.account_name = account_name;
+    public AccountTypes getTypes() {
+        return types;
+    }
+
+    public void setTypes(AccountTypes types) {
+        this.types = types;
+    }
+
+    public Account( double balance) {
         this.balance = balance;
+        this.types = AccountTypes.CHECKING;
     }
 
     public Integer getId() {
@@ -17,14 +24,6 @@ public class Account {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public String getAccount_name() {
-        return account_name;
-    }
-
-    public void setAccount_name(String account_name) {
-        this.account_name = account_name;
     }
 
     public double getBalance() {

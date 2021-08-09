@@ -1,13 +1,22 @@
-package models;
+package com.revature.models;
 
-public class User {
+public class Customer {
     private Integer id;
-    private String firstName;
-    private String lastName;
+    private String name;
     private String passWord;
     private String email;
 
+    public Customer(Integer id, String name, String passWord, String email) {
+        this.id = id;
+        this.name = name;
+        this.passWord = passWord;
+        this.email = email;
+    }
 
+    public Customer(String name, String email) {
+        this.name = name;
+        this.email = email;
+    }
 
     public Integer getId() {
         return id;
@@ -17,20 +26,12 @@ public class User {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getPassWord() {

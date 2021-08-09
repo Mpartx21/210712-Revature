@@ -1,5 +1,7 @@
-package dao;
+package com.revature.dao;
 
+
+import com.revature.models.Account;
 
 import java.sql.SQLException;
 import java.util.List;

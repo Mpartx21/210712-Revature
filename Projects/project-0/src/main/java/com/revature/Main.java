@@ -1,10 +1,6 @@
+package com.revature;
 
-import utils.ProgramManager;
-
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.Scanner;
+import com.revature.utils.ProgramManager;
 
 public class Main {
     public static ProgramManager programManager = new ProgramManager();
@@ -12,7 +8,7 @@ public class Main {
     public static void main(String[] args)  {
 
         while (programManager.isRunning()) {
-//            programManager.
+            programManager.getScreenNavigator().navigate("First");
         }
     }
 }

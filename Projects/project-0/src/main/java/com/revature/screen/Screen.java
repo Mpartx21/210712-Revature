@@ -1,4 +1,4 @@
-package screen;
+package com.revature.screen;
 
 public abstract class Screen {
     private String name;

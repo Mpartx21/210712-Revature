@@ -1,5 +1,8 @@
-package dao;
+package com.revature.dao;
 
+
+import com.revature.models.Account;
+import com.revature.utils.ConnectionFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,7 +15,7 @@ public class AccountDAOImpl implements AccountDAO {
     private static Connection connection = null;
 
     public AccountDAOImpl() {
-        this.connection = ConnectionFac
+        this.connection = ConnectionFactory.getInstance().getConnection();
     }
 
     @Override
