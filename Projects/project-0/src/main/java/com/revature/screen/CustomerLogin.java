@@ -14,9 +14,7 @@ public class CustomerLogin extends Screen{
     @Override
     public void printScreen() {
         try {
-            System.out.println("Signing up for a new Account\n");
-            String custName = programManager.getScanner().nextLine();
-            System.out.println("Please provide your name: ");
+            System.out.println("Customer Login");
             String custEmail = programManager.getScanner().nextLine();
             System.out.println("Please provide your email: ");
             String custPassword = programManager.getScanner().nextLine();

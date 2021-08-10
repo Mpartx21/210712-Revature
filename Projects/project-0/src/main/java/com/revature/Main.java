@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args)  {
 
         while (programManager.isRunning()) {
-            programManager.getScreenNavigator().navigate("First");
+            programManager.getScreenNavigator().navigate("first");
         }
     }
 }
