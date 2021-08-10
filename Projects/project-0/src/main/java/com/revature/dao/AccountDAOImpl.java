@@ -64,11 +64,13 @@ public class AccountDAOImpl implements AccountDAO {
     }
 
     @Override
-    public List<Account> getAccount() throws SQLException {
+    public List<Account> getAccountsByCustomerId(int customerID) throws SQLException {
         List<Account> accounts = new ArrayList<>();
         connection = ConnectionFactory.getInstance().getConnection();
-        String sql = "select * from account";
-        Statement preparedStatement = connection.createStatement();
+        String sql = "select * from account where customer_id = ?)";
+
+        preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setInt(1,customerID);
         ResultSet resultSet = preparedStatement.executeQuery(sql);
 
         while (resultSet.next()){
@@ -76,14 +78,10 @@ public class AccountDAOImpl implements AccountDAO {
             int accountID = resultSet.findColumn("account_id");
             Double balance = resultSet.getDouble("account_balance");
             String types = resultSet.getString("account_type");
-            Account account = new Account(accountID,balance,types);
+            Account account = new Account(accountID,customerID,balance,types);
             accounts.add(account);
         }
         return accounts;
     }
 
-    @Override
-    public Account accountByID(int id) throws SQLException {
-        return null;
-    }
 }

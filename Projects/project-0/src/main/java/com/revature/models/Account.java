@@ -22,8 +22,9 @@ public class Account {
         this.types = types;
     }
 
-    public Account(int id, Double balance, String type) {
+    public Account(int accountID, int customerID, Double balance, String type) {
         this.id = id;
+        this.customerID = customerID;
         this.balance = balance;
         this.types.setType(type);
     }
