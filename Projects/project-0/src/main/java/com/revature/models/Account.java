@@ -10,13 +10,22 @@ public class Account {
         return types;
     }
 
+    public Integer getCustomerID() {
+        return customerID;
+    }
+
+    public void setCustomerID(Integer customerID) {
+        this.customerID = customerID;
+    }
+
     public void setTypes(AccountTypes types) {
         this.types = types;
     }
 
-    public Account( double balance) {
+    public Account(int id, Double balance, String type) {
+        this.id = id;
         this.balance = balance;
-        this.types = AccountTypes.CHECKING;
+        this.types.setType(type);
     }
 
     public Integer getId() {

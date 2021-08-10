@@ -5,6 +5,13 @@ public enum AccountTypes {
 
     private String type;
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 
     AccountTypes(String type) {
         this.type = type;

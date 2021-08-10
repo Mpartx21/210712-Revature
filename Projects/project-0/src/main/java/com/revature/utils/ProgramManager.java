@@ -33,7 +33,8 @@ public class ProgramManager {
                 .addScreen(new CustomerLogin())
                 .addScreen(new EmployeeLogin())
                 .addScreen(new CustomerRegister())
-                .addScreen(new AccountOptions());
+                .addScreen(new AccountOptions())
+                .addScreen(new AddAccount());
     }
 
     public Account getAccount() {
