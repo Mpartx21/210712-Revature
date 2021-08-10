@@ -21,7 +21,7 @@ public class OpeningScreen extends Screen {
         try{
             switch (programManager.getScanner().nextLine()){
                 case "1":
-                    programManager.getScreenNavigator().navigate("userLogin");
+                    programManager.getScreenNavigator().navigate("customerLogin");
                     break;
                 case "2":
                     programManager.getScreenNavigator().navigate("customerRegister");

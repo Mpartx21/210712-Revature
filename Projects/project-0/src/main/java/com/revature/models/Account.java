@@ -2,6 +2,7 @@ package com.revature.models;
 
 public class Account {
     private Integer id;
+    private Integer customerID;
     private double balance;
     private AccountTypes types;
 

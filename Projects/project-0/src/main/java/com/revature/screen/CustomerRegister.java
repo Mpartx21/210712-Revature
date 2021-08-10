@@ -15,12 +15,12 @@ public class CustomerRegister extends Screen{
     public void printScreen(){
         try {
             System.out.println("Signing up for a new Account\n");
-            String custName = programManager.getScanner().nextLine();
             System.out.println("Please provide your name: ");
-            String custEmail = programManager.getScanner().nextLine();
+            String custName = programManager.getScanner().nextLine();
             System.out.println("Please provide your email: ");
-            String custPassword = programManager.getScanner().nextLine();
+            String custEmail = programManager.getScanner().nextLine();
             System.out.println("Please provide your password:");
+            String custPassword = programManager.getScanner().nextLine();
             new CustomerService(CustomerDAOFactory.getUserDAO())
                     .registerCustomer(new Customer(custName, custEmail, custPassword));
 

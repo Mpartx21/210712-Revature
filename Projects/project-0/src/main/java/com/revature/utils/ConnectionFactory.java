@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConnectionFactory {
-    private final String url = "jdbc:mysql://localhost:3306/revature";
+    private final String url = "jdbc:mysql://localhost:3306/project0_db";
     private final String userName ="root";
     private final String passWord = "password";
 

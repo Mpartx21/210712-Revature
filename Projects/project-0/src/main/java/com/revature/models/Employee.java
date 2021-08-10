@@ -12,6 +12,19 @@ public class Employee {
         this.password = password;
     }
 
+    public Employee(int employeeId, String name, String email) {
+        this.id = employeeId;
+        this.name=name;
+        this.email = email;
+    }
+
+    public Employee(int id, String name, String newEmail, String newPassword) {
+        this.id=id;
+        this.name=name;
+        this.email = newEmail;
+        this.password = newPassword;
+    }
+
     public int getId() {
         return id;
     }
