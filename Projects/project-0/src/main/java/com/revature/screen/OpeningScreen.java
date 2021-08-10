@@ -4,7 +4,7 @@ import static com.revature.Main.programManager;
 
 public class OpeningScreen extends Screen {
     public OpeningScreen() {
-        super("First");
+        super("first");
     }
 
     @Override

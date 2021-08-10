@@ -18,6 +18,13 @@ public class Customer {
         this.email = email;
     }
 
+    public Customer(String name, String email, String passWord) {
+        this.name = name;
+        this.email = email;
+        this.passWord = passWord;
+
+    }
+
     public Integer getId() {
         return id;
     }

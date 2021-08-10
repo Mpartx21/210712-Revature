@@ -11,5 +11,6 @@ public interface CustomerDAO {
     void updateUser(Customer customer) throws SQLException;
     void deleteUser(int id) throws SQLException;
     List<Customer> getUser() throws SQLException;
+    Customer findByEmail(String email) throws SQLException;
     Customer customerByEmailandPassword(String email,String password) throws SQLException;
 }

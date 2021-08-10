@@ -18,7 +18,9 @@ public class CustomerDAOImpl implements CustomerDAO {
 
     @Override
     public void addCustomer(Customer customer) throws SQLException {
-        String sql = "insert into customer (customer_name,customer_email,customer_password) values (?,?,?)";
+        String sql = "insert into customer " +
+                "(customer_name,customer_email,customer_password)" +
+                " values (?,?,?)";
         preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1,customer.getName());
         preparedStatement.setString(2, customer.getEmail());
@@ -78,6 +80,26 @@ public class CustomerDAOImpl implements CustomerDAO {
         }
         return customers;
     }
+
+    @Override
+    public Customer findByEmail(String email) throws SQLException {
+        Customer customer = null;
+        connection = ConnectionFactory.getInstance().getConnection();
+        String sql = "select * from customer where customer_email = ?";
+        preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setString(1,email);
+        ResultSet resultSet = preparedStatement.executeQuery();
+
+        if (resultSet.next()){
+            int id = resultSet.getInt("customer_id");
+            String name = resultSet.getString("customer_name");
+            String newEmail = resultSet.getString("customer_email");
+            String newPassword = resultSet.getString("customer_password");
+            customer = new Customer(id,name,newEmail,newPassword);
+        }
+        return customer;
+    }
+
 
     @Override
     public Customer customerByEmailandPassword(String email,String password) throws SQLException {
