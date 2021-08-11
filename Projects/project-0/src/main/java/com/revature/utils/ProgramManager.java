@@ -6,6 +6,7 @@ import com.revature.models.Account;
 import com.revature.models.Customer;
 import com.revature.models.Employee;
 import com.revature.screen.*;
+import org.apache.log4j.Logger;
 
 import java.sql.SQLException;
 import java.util.Scanner;
@@ -18,7 +19,14 @@ public class ProgramManager {
     private Customer customer;
     private Employee employee;
 
+    public Logger getLogger() {
+        return logger;
+    }
+
+    private Logger logger;
+
     public ProgramManager(){
+        logger =Logger.getLogger(ProgramManager.class.getName());
         running = true;
         scanner = new Scanner(System.in);
         //Initalizing the DAOs

@@ -34,9 +34,11 @@ public class Deposit extends Screen{
             }
 
         }catch (NullPointerException e){
-            System.out.println("Wrong input");
+            System.out.println("Wrong input try again");
+            programManager.getScreenNavigator().navigate("deposit");
         }catch (SQLException e){
-            System.out.println("Grabing your accounts was an issue");
+            System.out.println("Grabbing your accounts was an issue");
+            programManager.getScreenNavigator().navigate("accountOptions");
         }
     }
 }

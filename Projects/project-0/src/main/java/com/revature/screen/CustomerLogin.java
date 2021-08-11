@@ -25,6 +25,7 @@ public class CustomerLogin extends Screen{
                 programManager.getScreenNavigator().navigate("accountOptions");
             }else {
                 throw new AuthenticateException("No Customer with those credentials");
+
             }
         }catch (Exception e){
             programManager.getScreenNavigator().navigate("first");

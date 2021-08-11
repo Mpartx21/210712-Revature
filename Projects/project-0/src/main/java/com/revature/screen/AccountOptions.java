@@ -39,6 +39,7 @@ public class AccountOptions extends Screen{
             }
         }catch (Exception e){
             e.printStackTrace();
+            programManager.getScreenNavigator().navigate("accountOptions");
         }
     }
 }

@@ -11,7 +11,9 @@ public class OpeningScreen extends Screen {
 
     @Override
     public void printScreen() {
-        System.out.println("First Screen");
+        programManager.getLogger().info("Opening Bank Console");
+
+        System.out.println("Opening Screen");
         System.out.println("1: Customer Login");
         System.out.println("2: Customer Register");
         System.out.println("3: Employee Login");
@@ -42,10 +44,12 @@ public class OpeningScreen extends Screen {
                     break;
                 default:
                     System.out.println("Please Try Again");
+                    programManager.getScreenNavigator().navigate("first");
             }
 
         }catch (Exception e){
             e.printStackTrace();
+            programManager.getScreenNavigator().navigate("first");
         }
     }
 }
