@@ -28,8 +28,7 @@ public class Deposit extends Screen{
 
             for (Account account:accounts) {
                 if (account.getAccountID().equals(account_id)){
-                    new AccountService(AccountDAOFactory.getAccountDAO())
-                            .deposit(account, deposit);
+                    new AccountService().deposit(account, deposit);
                     programManager.getScreenNavigator().navigate("accountOptions");
                 }
             }
