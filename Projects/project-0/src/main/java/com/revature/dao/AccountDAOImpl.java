@@ -20,13 +20,12 @@ public class AccountDAOImpl implements AccountDAO {
     @Override
     public void addAccount(Account account) throws SQLException {
         String sql = "insert into account " +
-                "(account_id,customer_id,account+_balance,account_type)" +
-                " values (?,?,?,?)";
+                "(account_balance,account_type,customer_id )" +
+                " values (?,?,(select customer_id from customer where customer_id = ?))";
         preparedStatement = connection.prepareStatement(sql);
-        preparedStatement.setInt(1,account.getId());
-        preparedStatement.setInt(2, account.getCustomerID());
-        preparedStatement.setDouble(3, account.getBalance());
-        preparedStatement.setString(4,account.getTypes().name());
+        preparedStatement.setDouble(1, account.getBalance());
+        preparedStatement.setString(2,account.getTypes().getType());
+        preparedStatement.setInt(3, account.getCustomerID());
         int count = preparedStatement.executeUpdate();
         if (count > 0){
             System.out.println("Account Added");
@@ -41,7 +40,7 @@ public class AccountDAOImpl implements AccountDAO {
         preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setDouble(1, account.getBalance());
         preparedStatement.setString(2,account.getTypes().name());
-        preparedStatement.setInt(3, account.getId());
+        preparedStatement.setInt(3, account.getAccountID());
         int count = preparedStatement.executeUpdate();
         if(count > 0) {
             System.out.println("Account updated");
@@ -67,15 +66,15 @@ public class AccountDAOImpl implements AccountDAO {
     public List<Account> getAccountsByCustomerId(int customerID) throws SQLException {
         List<Account> accounts = new ArrayList<>();
         connection = ConnectionFactory.getInstance().getConnection();
-        String sql = "select * from account where customer_id = ?)";
+        String sql = "select * from account where customer_id = ?";
 
-        preparedStatement = connection.prepareStatement(sql);
+         preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setInt(1,customerID);
-        ResultSet resultSet = preparedStatement.executeQuery(sql);
+        ResultSet resultSet = preparedStatement.executeQuery();
 
         while (resultSet.next()){
 //            populate an employee object when it is iterated through
-            int accountID = resultSet.findColumn("account_id");
+            int accountID = resultSet.getInt("account_id");
             Double balance = resultSet.getDouble("account_balance");
             String types = resultSet.getString("account_type");
             Account account = new Account(accountID,customerID,balance,types);

@@ -34,7 +34,9 @@ public class ProgramManager {
                 .addScreen(new EmployeeLogin())
                 .addScreen(new CustomerRegister())
                 .addScreen(new AccountOptions())
-                .addScreen(new AddAccount());
+                .addScreen(new AddAccount())
+                .addScreen(new Withdrawal())
+                .addScreen(new Deposit());
     }
 
     public Account getAccount() {

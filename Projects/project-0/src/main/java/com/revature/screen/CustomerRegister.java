@@ -18,7 +18,7 @@ public class CustomerRegister extends Screen{
             System.out.println("Please provide your name: ");
             String custName = programManager.getScanner().nextLine();
             System.out.println("Please provide your email: ");
-            String custEmail = programManager.getScanner().nextLine();
+            String custEmail = programManager.getScanner().nextLine().trim();
             System.out.println("Please provide your password:");
             String custPassword = programManager.getScanner().nextLine();
             new CustomerService(CustomerDAOFactory.getUserDAO())

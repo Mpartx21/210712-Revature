@@ -1,10 +1,17 @@
 package com.revature.models;
 
 public class Account {
-    private Integer id;
+    private Integer accountID;
     private Integer customerID;
     private double balance;
     private AccountTypes types;
+
+    public Account(int accountID, int customerID, Double balance, String types) {
+        this.accountID = accountID;
+        this.customerID = customerID;
+        this.balance = balance;
+        this.types = AccountTypes.getByType(types);
+    }
 
     public AccountTypes getTypes() {
         return types;
@@ -18,23 +25,22 @@ public class Account {
         this.customerID = customerID;
     }
 
-    public void setTypes(AccountTypes types) {
-        this.types = types;
+    public void setTypes(String types) {
+        AccountTypes.valueOf(types);
     }
 
-    public Account(int accountID, int customerID, Double balance, String type) {
-        this.id = id;
+    public Account(int customerID, Double balance,AccountTypes type) {
         this.customerID = customerID;
         this.balance = balance;
-        this.types.setType(type);
+        this.types = type;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getAccountID() {
+        return accountID;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setAccountID(Integer accountID) {
+        this.accountID = accountID;
     }
 
     public double getBalance() {
@@ -43,5 +49,14 @@ public class Account {
 
     public void setBalance(double balance) {
         this.balance = balance;
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "Account ID= " + accountID +
+                ",Account Types= " + types.toString().toUpperCase() +
+                ",Balance= " + balance +
+                '}';
     }
 }

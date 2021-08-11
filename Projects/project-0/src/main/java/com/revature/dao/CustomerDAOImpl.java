@@ -63,7 +63,7 @@ public class CustomerDAOImpl implements CustomerDAO {
     }
 
     @Override
-    public List<Customer> getUser() throws SQLException {
+    public List<Customer> getCustomers() throws SQLException {
         List<Customer> customers = new ArrayList<>();
         connection = ConnectionFactory.getInstance().getConnection();
         String sql = "select * from customer";
@@ -72,10 +72,11 @@ public class CustomerDAOImpl implements CustomerDAO {
 
         while (resultSet.next()){
 //            populate an employee object when it is iterated through
+            int customerID = resultSet.getInt("customer_id");
             String name = resultSet.getString("customer_name");
             String email = resultSet.getString("customer_email");
 
-            Customer customer = new Customer(name,email);
+            Customer customer = new Customer(customerID,name,email);
             customers.add(customer);
         }
         return customers;

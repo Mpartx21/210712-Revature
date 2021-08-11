@@ -1,5 +1,7 @@
 package com.revature.screen;
 
+import com.revature.dao.CustomerDAOFactory;
+
 import static com.revature.Main.programManager;
 
 public class OpeningScreen extends Screen {
@@ -19,6 +21,11 @@ public class OpeningScreen extends Screen {
 
 
         try{
+            CustomerDAOFactory.getUserDAO()
+                    .getCustomers().stream()
+                    .forEach(customer ->{
+                        System.out.println(customer.toString());
+                    });
             switch (programManager.getScanner().nextLine()){
                 case "1":
                     programManager.getScreenNavigator().navigate("customerLogin");
