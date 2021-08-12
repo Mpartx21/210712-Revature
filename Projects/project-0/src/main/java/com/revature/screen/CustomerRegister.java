@@ -1,6 +1,5 @@
 package com.revature.screen;
 
-import com.revature.dao.CustomerDAOFactory;
 import com.revature.models.Customer;
 import com.revature.service.CustomerService;
 
@@ -21,7 +20,7 @@ public class CustomerRegister extends Screen{
             String custEmail = programManager.getScanner().nextLine().trim();
             System.out.println("Please provide your password:");
             String custPassword = programManager.getScanner().nextLine();
-            new CustomerService(CustomerDAOFactory.getUserDAO())
+            new CustomerService()
                     .registerCustomer(new Customer(custName, custEmail, custPassword));
 
             programManager.getScreenNavigator().navigate("accountOptions");

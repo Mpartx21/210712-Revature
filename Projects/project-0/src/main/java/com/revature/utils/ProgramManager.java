@@ -27,6 +27,7 @@ public class ProgramManager {
 
     public ProgramManager(){
         logger =Logger.getLogger(ProgramManager.class.getName());
+
         running = true;
         scanner = new Scanner(System.in);
         //Initalizing the DAOs
@@ -41,6 +42,7 @@ public class ProgramManager {
                 .addScreen(new CustomerLogin())
                 .addScreen(new EmployeeLogin())
                 .addScreen(new CustomerRegister())
+                .addScreen(new EmployeeRegister())
                 .addScreen(new AccountOptions())
                 .addScreen(new AddAccount())
                 .addScreen(new Withdrawal())

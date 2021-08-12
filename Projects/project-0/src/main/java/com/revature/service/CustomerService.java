@@ -15,7 +15,7 @@ public class CustomerService {
     private static CustomerDAO customerDAO = null;
 
 
-    public CustomerService(CustomerDAO cDAO) throws SQLException {
+    public CustomerService() throws SQLException {
         customerDAO = CustomerDAOFactory.getUserDAO();
     }
 
@@ -38,13 +38,4 @@ public class CustomerService {
         customerDAO.addCustomer(newCustomer);
         programManager.setCustomer(newCustomer);
     }
-
-    public CustomerDAO getCustomerDAO() {
-        return customerDAO;
-    }
-
-    public void setCustomerDAO(CustomerDAO customerDAO) {
-        this.customerDAO = customerDAO;
-    }
-
 }

@@ -19,7 +19,7 @@ public class EmployeeDAOImpl implements EmployeeDAO{
     @Override
     public void addEmployee(Employee employee) throws SQLException {
         String sql = "insert into employee " +
-                "(employe_name,employee_email,employee_password)" +
+                "(employee_name,employee_email,employee_password)" +
                 " values (?,?,?)";
         preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1,employee.getName());
@@ -31,6 +31,7 @@ public class EmployeeDAOImpl implements EmployeeDAO{
         }else {
             System.out.println("Ooops! Something went wrong");
         }
+
     }
 
     @Override

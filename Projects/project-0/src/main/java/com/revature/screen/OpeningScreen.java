@@ -1,6 +1,7 @@
 package com.revature.screen;
 
 import com.revature.dao.CustomerDAOFactory;
+import com.revature.dao.EmployeeDOAFactory;
 
 import static com.revature.Main.programManager;
 
@@ -17,7 +18,8 @@ public class OpeningScreen extends Screen {
         System.out.println("1: Customer Login");
         System.out.println("2: Customer Register");
         System.out.println("3: Employee Login");
-        System.out.println("4: Close");
+        System.out.println("4: Employee Register");
+        System.out.println("5: Close");
         System.out.println("+-------------------+");
 
 
@@ -28,6 +30,11 @@ public class OpeningScreen extends Screen {
                     .forEach(customer ->{
                         System.out.println(customer.toString());
                     });
+            EmployeeDOAFactory.getEmployeeDAO()
+                    .getEmployee().stream()
+                    .forEach(employee -> {
+        System.out.println(employee.toString());});
+
             switch (programManager.getScanner().nextLine()){
                 case "1":
                     programManager.getScreenNavigator().navigate("customerLogin");
@@ -39,6 +46,9 @@ public class OpeningScreen extends Screen {
                     programManager.getScreenNavigator().navigate("employeeLogin");
                     break;
                 case "4":
+                    programManager.getScreenNavigator().navigate("employeeRegister");
+                    break;
+                case "5":
                     System.out.println("Closing");
                     programManager.setRunning(false);
                     break;

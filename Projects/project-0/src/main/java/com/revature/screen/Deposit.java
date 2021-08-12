@@ -18,6 +18,8 @@ public class Deposit extends Screen{
     @Override
     public void printScreen() {
         try{
+            programManager.getLogger().info("Depositing");
+
             System.out.println("Depositing\n" +
                                "Choose Account ID to deposit");
             int account_id = programManager.getScanner().nextInt();
@@ -36,6 +38,8 @@ public class Deposit extends Screen{
         }catch (NullPointerException e){
             System.out.println("Wrong input try again");
             programManager.getScreenNavigator().navigate("deposit");
+
+            programManager.getLogger().warn("Wrong input made during deposit");
         }catch (SQLException e){
             System.out.println("Grabbing your accounts was an issue");
             programManager.getScreenNavigator().navigate("accountOptions");

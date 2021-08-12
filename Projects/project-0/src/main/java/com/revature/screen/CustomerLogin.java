@@ -1,6 +1,5 @@
 package com.revature.screen;
 
-import com.revature.dao.CustomerDAOFactory;
 import com.revature.exception.AuthenticateException;
 import com.revature.service.CustomerService;
 
@@ -19,7 +18,7 @@ public class CustomerLogin extends Screen{
             String custEmail = programManager.getScanner().nextLine();
             System.out.println("Please provide your password:");
             String custPassword = programManager.getScanner().nextLine();
-            new CustomerService(CustomerDAOFactory.getUserDAO()).authenticateCustomer(custEmail,custPassword);
+            new CustomerService().authenticateCustomer(custEmail,custPassword);
 
             if(programManager.getCustomer() != null){
                 programManager.getScreenNavigator().navigate("accountOptions");

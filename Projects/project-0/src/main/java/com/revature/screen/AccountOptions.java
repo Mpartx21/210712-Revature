@@ -36,6 +36,11 @@ public class AccountOptions extends Screen{
                     break;
                 case "3":
                     programManager.getScreenNavigator().navigate("withdrawal");
+                    break;
+                case "4":
+                    programManager.setCustomer(null);
+                    programManager.getScreenNavigator().navigate("first");
+
             }
         }catch (Exception e){
             e.printStackTrace();
