@@ -15,5 +15,5 @@ public abstract class Screen {
         this.name = name;
     }
 
-    public abstract void printScreen();
+    public abstract void printScreen()  ;
 }

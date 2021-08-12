@@ -1,10 +1,24 @@
 package com.revature.models;
 
+import java.util.Map;
+
 public class Employee {
     private int id;
     private String name;
     private String email;
     private String password;
+
+    private static Map<Integer,Account> transfers;
+
+    public Employee() {}
+
+    public Map<Integer, Account> getTransfers() {
+        return transfers;
+    }
+
+    public void setTransfers(Map<Integer, Account> transfers) {
+        this.transfers = transfers;
+    }
 
     public Employee(String name, String email, String password) {
         this.name = name;

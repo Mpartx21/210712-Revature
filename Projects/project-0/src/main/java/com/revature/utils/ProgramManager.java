@@ -26,6 +26,7 @@ public class ProgramManager {
     private Logger logger;
 
     public ProgramManager(){
+        employee= new Employee();
         logger =Logger.getLogger(ProgramManager.class.getName());
 
         running = true;
@@ -44,9 +45,12 @@ public class ProgramManager {
                 .addScreen(new CustomerRegister())
                 .addScreen(new EmployeeRegister())
                 .addScreen(new AccountOptions())
+                .addScreen(new EmployeeOptions())
                 .addScreen(new AddAccount())
                 .addScreen(new Withdrawal())
-                .addScreen(new Deposit());
+                .addScreen(new Deposit())
+                .addScreen(new Transfer())
+                .addScreen(new EmployeeTransfers());
     }
 
     public Account getAccount() {

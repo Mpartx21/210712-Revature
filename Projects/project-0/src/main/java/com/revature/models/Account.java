@@ -5,6 +5,7 @@ public class Account {
     private Integer customerID;
     private double balance;
     private AccountTypes types;
+    private Status status;
 
     public Account(int accountID, int customerID, Double balance, String types) {
         this.accountID = accountID;

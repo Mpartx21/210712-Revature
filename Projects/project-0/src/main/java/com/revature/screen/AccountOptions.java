@@ -16,7 +16,8 @@ public class AccountOptions extends Screen{
             System.out.println("1: Add Account\n" +
                                "2: Deposit\n" +
                                "3: Withdrawal\n" +
-                               "4: Sign Out\n" +
+                               "4: Transfer\n" +
+                               "5: Sign Out\n" +
                                "Accounts: ");
             AccountDAOFactory.getAccountDAO()
                              .getAccountsByCustomerId(programManager.getCustomer().getId())
@@ -38,6 +39,9 @@ public class AccountOptions extends Screen{
                     programManager.getScreenNavigator().navigate("withdrawal");
                     break;
                 case "4":
+                    programManager.getScreenNavigator().navigate("transfer");
+                    break;
+                case "5":
                     programManager.setCustomer(null);
                     programManager.getScreenNavigator().navigate("first");
 
