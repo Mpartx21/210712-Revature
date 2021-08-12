@@ -4,4 +4,7 @@ public class OverWithdrawal extends Exception{
     public OverWithdrawal() {
         super("Amount Exceeds current balance please try again");
     }
+    public OverWithdrawal(String message){
+        super(message);
+    }
 }

@@ -5,6 +5,7 @@ import com.revature.models.Account;
 import com.revature.service.AccountService;
 
 import java.sql.SQLException;
+import java.util.InputMismatchException;
 import java.util.List;
 
 import static com.revature.Main.programManager;
@@ -42,6 +43,9 @@ public class Deposit extends Screen{
             programManager.getLogger().warn("Wrong input made during deposit");
         }catch (SQLException e){
             System.out.println("Grabbing your accounts was an issue");
+            programManager.getScreenNavigator().navigate("accountOptions");
+        }catch (InputMismatchException e){
+            System.out.println("Wrong input ");
             programManager.getScreenNavigator().navigate("accountOptions");
         }
     }

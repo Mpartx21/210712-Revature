@@ -20,17 +20,21 @@ public class AccountService {
 
     public void deposit(Account account,double deposit) {
         try {
+            if(deposit<0) throw new OverWithdrawal("Deposit amount invalid");
             account.setBalance(account.getBalance() + deposit);
 
             AccountDAOFactory.getAccountDAO().updateAccount(account);
+            programManager.getLogger().info("Account ID: "+ account.getAccountID()+" deposit money");
 
-        }catch (SQLException e){
+        }catch (SQLException| OverWithdrawal e){
             System.out.println("updating account failed");
         }
     }
 
     public void withdrawal(Account account,double withdrawal){
+
        try {
+           if(withdrawal<0) throw new OverWithdrawal("withdrawal amount invalid");
         double verify = account.getBalance() - withdrawal;
 
         if(verify < 0){
@@ -40,7 +44,7 @@ public class AccountService {
         account.setBalance(verify);
 
         AccountDAOFactory.getAccountDAO().updateAccount(account);
-
+        programManager.getLogger().info("Account ID: "+ account.getAccountID()+" withdrew money");
         }catch (OverWithdrawal | SQLException e){
            System.out.println("Issue with withdrawal");
        }

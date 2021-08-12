@@ -43,7 +43,7 @@ public class EmployeeTransfers extends Screen {
             }
         }
         System.out.println("Account ID: " + withdrawal.getAccountID() + " is withdrawing " + transfer +
-                " Account ID :" + deposit.getBalance());
+                " Account ID :" + deposit.getAccountID());
 
         System.out.println("1: Approve\n" +
                 "2: Deny");

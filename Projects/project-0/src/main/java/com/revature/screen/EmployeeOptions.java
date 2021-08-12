@@ -19,25 +19,22 @@ public class EmployeeOptions extends Screen {
         try {
             System.out.println("Employee Options\n" +
                     "1: Show Customers and Accounts\n" +
-                    "2: Approve Accounts\n" +
-                    "3: View Logs\n" +
-                    "4. Money Transfers\n" +
-                    "5. Sign Out");
+                    "2: View Logs\n" +
+                    "3. Money Transfers\n" +
+                    "4. Sign Out");
             switch (programManager.getScanner().nextLine()) {
                 case "1":
                     printAccountsandCustomers();
-                    programManager.getScreenNavigator().navigate("accountOptions");
+                    programManager.getScreenNavigator().navigate("employeeOptions");
                     break;
                 case "2":
-                    break;
-                case "3":
                     printLogs();
                     programManager.getScreenNavigator().navigate("employeeOptions");
                     break;
-                case "4":
+                case "3":
                     programManager.getScreenNavigator().navigate("employeeTransfer");
                     break;
-                case "5":
+                case "4":
                     programManager.setEmployee(null);
                     programManager.getScreenNavigator().navigate("first");
                     break;

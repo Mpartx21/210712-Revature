@@ -21,6 +21,7 @@ public class CustomerLogin extends Screen{
             new CustomerService().authenticateCustomer(custEmail,custPassword);
 
             if(programManager.getCustomer() != null){
+                programManager.getLogger().info("Customer ID: "+ programManager.getCustomer().getId()+" logged in");
                 programManager.getScreenNavigator().navigate("accountOptions");
             }else {
                 throw new AuthenticateException("No Customer with those credentials");

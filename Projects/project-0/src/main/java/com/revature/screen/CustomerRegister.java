@@ -23,7 +23,7 @@ public class CustomerRegister extends Screen{
             new CustomerService()
                     .registerCustomer(new Customer(custName, custEmail, custPassword));
 
-            programManager.getScreenNavigator().navigate("accountOptions");
+            programManager.getScreenNavigator().navigate("first");
 
         }catch (Exception e){
             programManager.getScreenNavigator().navigate("first");
