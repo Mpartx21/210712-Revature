@@ -19,17 +19,17 @@
 
     <div>
         <label for="">Email</label>
-        <input type="text" name="" id="email">
+        <input type="text" name="email" id="email">
     </div>
 
     <div>
         <label for="">Password</label>
-        <input type="text" name="" id="password">
+        <input type="text" name="password" id="password">
     </div>
 
     <div>
         <label for="">Confirm Password</label>
-        <input type="text" name="" id="cpassword">
+        <input type="text" name="cpassword" id="cpassword">
     </div>
 
     <div>
@@ -48,10 +48,12 @@
         var password = document.userForm.password.value;
         var cpassword = document.userForm.cpassword.value;
         
-        if(name==null || name==""){
-            alert('this is required')
+        if(name==null || name==""||email==null || email==""||
+        password==null || password==""||cpassword==null || cpassword==""|| ){
+            
+            alert('this'+  +'is required')
         }
-
+        
     }
 
 </script>
