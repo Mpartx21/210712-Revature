@@ -1,0 +1,40 @@
+header{
+    width: 100%;
+    min-height: 200px;
+}
+
+aside{
+    width: 25%;
+    min-height: 1000px;
+    float: left;
+}
+
+section{
+    float: left;
+    width: 75%;
+    min-height: 1000px;
+    background-color: aqua;
+}
+
+footer{
+    /* clear: both; */
+    width: 100%;
+    min-height: 1000px;
+}
+div{
+    width: 100%;
+    height: 200px;
+    
+}
+h1{
+    font-size: 500%;
+    text-align: center;
+}
+#skills h2{
+    font-size: 350%;
+}
+#skills h4{
+    font-weight: initial;
+    font-size: 150%;
+}
+
