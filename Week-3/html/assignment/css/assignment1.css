@@ -23,18 +23,33 @@ footer{
 }
 div{
     width: 100%;
-    height: 200px;
+    height: 75%;
     
 }
 h1{
     font-size: 500%;
     text-align: center;
 }
+ul.top{
+    list-style-type: none;
+}
+#skills{
+    align-content: center;
+}
 #skills h2{
     font-size: 350%;
 }
 #skills h4{
     font-weight: initial;
-    font-size: 150%;
+    font-size: 150
 }
+
+#selfParagraph p {
+    font-size: 125%;
+}
+#pic{
+    height: 100%;
+    width: 100%;
+}
+
 

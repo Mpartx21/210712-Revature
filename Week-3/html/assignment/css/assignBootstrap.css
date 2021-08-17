@@ -1,0 +1,6 @@
+body{
+    background-image: url('/html/assignment/image/beach.jpg');
+    background-size: 1400px;
+    background-position: 30%;
+    background-attachment: fixed;
+}
