@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" >
     <link rel="stylesheet" href="css/assignment2.css">
     <script type="text/JAVASCRIPT" src="javaScript/assignment2.js"></script>
     <title>Register</title>
 </head>
 <body>
-    <section>
-        <div>
-            <form name="registerForm" method="GET">
-                <input type="text" id="first">
-                <label for="first">First Name</label><br>
-                <input type="text" id="last">
-                <label for="last">Last Name</label><br>
-                <input type="BUTTON" value="Register" onclick="register()">
-            </form>
+    <form name="registerForm" method="GET">
+        <div class="form-group col-6">
+            <h3>Register</h3>
+            <input type="text" id="first" placeholder="First Name"><br>
+            <input type="text" id="last" placeholder="Last Name"><br>
+            <input class="btn btn-dark" type="BUTTON" value="Register" onclick="register()">
         </div>
-    </section>
+    </form>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
 </body>
 </html>

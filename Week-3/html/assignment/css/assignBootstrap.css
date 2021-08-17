@@ -1,6 +1,47 @@
-body{
-    background-image: url('/html/assignment/image/beach.jpg');
-    background-size: 1400px;
-    background-position: 30%;
-    background-attachment: fixed;
+.profile-pic {
+    text-align: center;
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+.profile{
+    border-radius: 50%;
+}
+h1{
+    font-size: 500%;
+    font-weight: bolder;
+    color:black;
+    text-align: center;
+    text-shadow:-1px -1px 0 white,1px -1px 0 white,
+    -1px 1px 0 white,1px 1px 0 white;
+    
+}
+p{
+
+    font-weight: bolder;
+    font-size: 150%;
+    color: black;
+    text-shadow:-1px -1px 0 white,1px -1px 0 white,
+    -1px 1px 0 white,1px 1px 0 white;
+    
+}
+.skill-title{
+    text-align: center;
+    font-weight: bolder;
+    color: black;
+    text-shadow:-1px -1px 0 white,1px -1px 0 white,
+    -1px 1px 0 white,1px 1px 0 white;
+}
+.table{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: max-content;
+    font-size: xx-large;
+}
+.table td{
+    font-weight: bolder;
+    text-align: center;
+    color:black;
+    text-shadow:-1px -1px 0 white,1px -1px 0 white,
+    -1px 1px 0 white,1px 1px 0 white;
 }
