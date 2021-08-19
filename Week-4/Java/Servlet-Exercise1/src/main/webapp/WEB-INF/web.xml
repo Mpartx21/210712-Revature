@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
- 
  	<servlet>
  		<servlet-name>login</servlet-name>
  		<servlet-class>com.revature.servlet.LoginServlet</servlet-class>
@@ -27,6 +26,35 @@
  		<servlet-name>mylogin</servlet-name>
  		<url-pattern>/mylogin</url-pattern>
  	</servlet-mapping>
+ 	
+ 	<servlet>
+ 		<servlet-name>loginseshserv</servlet-name>
+ 		<servlet-class>com.revature.servlet.LoginSeshServ</servlet-class>
+ 	</servlet>
+ 	<servlet-mapping>
+ 		<servlet-name>loginseshserv</servlet-name>
+ 		<url-pattern>/loginseshserv</url-pattern>
+ 	</servlet-mapping>
+ 	
+ 	<servlet>
+ 		<servlet-name>seshlogout</servlet-name>
+ 		<servlet-class>com.revature.servlet.SeshLogout</servlet-class>
+ 	</servlet>
+ 	<servlet-mapping>
+ 		<servlet-name>seshlogout</servlet-name>
+ 		<url-pattern>/seshlogout</url-pattern>
+ 	</servlet-mapping>	
+ 	
+ 	<servlet>
+ 		<servlet-name>seshprofile</servlet-name>
+ 		<servlet-class>com.revature.servlet.SeshProfile</servlet-class>
+ 	</servlet>
+ 	<servlet-mapping>
+ 		<servlet-name>seshprofile</servlet-name>
+ 		<url-pattern>/seshprofile</url-pattern>
+ 	</servlet-mapping>	
+ 	
+ 	
  	<welcome-file-list>
  		<welcome-file>index2.html</welcome-file>
  	</welcome-file-list>
