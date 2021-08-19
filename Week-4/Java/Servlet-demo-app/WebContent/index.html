@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+</head>
+<body>
+	<div class=" wrapper">
+		<h1>Registration Form</h1>
+		<form action="register" method="POST">
+			<table>
+				<tr>
+					<td>Enter Name</td>
+					<td><input type="text" name="user_name" placeholder="Name"/></td>
+				</tr>	
+				<tr>
+					<td>Enter Email</td>
+					<td><input type="text" name="user_email" placeholder="E-mail"/></td>
+				</tr>	
+				<tr>
+					<td>Enter Password</td>
+					<td><input type="text" name="user_password" placeholder="Password"/></td>
+				</tr>	
+				<tr>
+					<td>Select Gender</td>
+					<td>
+						<input type="radio" name="user_gender" value="Male">Male
+						<input type="radio" name="user_gender" value="Female">Female
+						<input type="radio" name="user_gender" value="Other">Other
+					</td>
+				</tr>	
+				<tr>
+					<td>Enter City</td>
+					<td>
+						<select name="user_city">
+							<option value="USA">USA</option>
+							<option value="UK">UK</option>
+							<option value="EU">EU</option>	
+						</select>	
+					</td>
+				</tr>
+				<tr>
+					<td>accept terms and conditions</td>
+					<td>
+						<input type="checkbox" value="accepted" name="agreement"/>
+					</td>
+				</tr>	
+				<tr>
+					<td colspan="2">
+					<input type="submit" value="Submit"/>
+					</td>
+				</tr>		
+				
+				
+			</table>
+		</form>
+	</div>
+</body>
+</html>
