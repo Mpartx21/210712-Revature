@@ -13,27 +13,12 @@
      			    '<h3>Enter Information</h3>'+
         			'<input type="text" id="user" placeholder="User Name"><br>'+
         			'<input type="text" id="pass" placeholder="Password"><br>'+
-        			'<input class="btn" type="BUTTON" value="Login" onclick="register()">'+
+        			'<input class="btn" type="BUTTON" value="Login" onclick="">'+
         		'</div>'+
     			'</form>';
 		}
 		
-		function checkIfNull(information){
-		    if(information == null||information == ""){
-		        return true;
-		    }
-		}
-		
-		function register(){
-			let username = document.getElementById('user').value;
-			let password = document.getElementById('pass').value;
-		    if(checkIfNull(username)){
-		        alert('Enter User Name')
-		    }
-		    if(checkIfNull(password)){
-		        alert('Enter Password')  
-			}
-		}
+
 	</script>
 </head>
 

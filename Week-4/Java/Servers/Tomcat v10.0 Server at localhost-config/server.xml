@@ -135,7 +135,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="dynmic-demo" path="/dynmic-demo" reloadable="true" source="org.eclipse.jst.jee.server:dynmic-demo"/><Context docBase="Servlet-demo-app" path="/Servlet-demo-app" reloadable="true" source="org.eclipse.jst.jee.server:Servlet-demo-app"/><Context docBase="Servlet-Session-Demo" path="/Servlet-Session-Demo" reloadable="true" source="org.eclipse.jst.jee.server:Servlet-Session-Demo"/><Context docBase="Servlet-Exercise1" path="/Servlet-Exercise1" reloadable="true" source="org.eclipse.jst.jee.server:Servlet-Exercise1"/></Host>
+      <Context docBase="dynmic-demo" path="/dynmic-demo" reloadable="true" source="org.eclipse.jst.jee.server:dynmic-demo"/><Context docBase="Servlet-demo-app" path="/Servlet-demo-app" reloadable="true" source="org.eclipse.jst.jee.server:Servlet-demo-app"/><Context docBase="Servlet-Session-Demo" path="/Servlet-Session-Demo" reloadable="true" source="org.eclipse.jst.jee.server:Servlet-Session-Demo"/><Context docBase="Servlet-Exercise1" path="/Servlet-Exercise1" reloadable="true" source="org.eclipse.jst.jee.server:Servlet-Exercise1"/><Context docBase="Emp-Table" path="/Emp-Table" reloadable="true" source="org.eclipse.jst.jee.server:Emp-Table"/></Host>
     </Engine>
   </Service>
 </Server>
