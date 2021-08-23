@@ -28,9 +28,13 @@ public class Employee {
 	@Column(name ="employee_country")
 	private String country;
 	
-	
-	
-	
+	public Employee(String name, String email, String gender, String country) {
+		super();
+		this.name = name;
+		this.email = email;
+		this.gender = gender;
+		this.country = country;
+	}
 	public int getId() {
 		return id;
 	}

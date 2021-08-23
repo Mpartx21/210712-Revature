@@ -1,4 +1,4 @@
-package com.revature.Utils;
+package com.revature.utils;
 
 import java.io.File;
 
@@ -11,14 +11,21 @@ public class HibernateUtil {
      
 	    private static SessionFactory buildSessionFactory() {
 	        try{
-	            // Create the SessionFactory from hibernate.cfg.xml
-	            return new Configuration().configure(new File("hibernate.cgf.xml")).buildSessionFactory();
-	        }
-	        catch (Exception e) {
+	        	Configuration cfg = new Configuration();
+	            
+	            // read the configuration and load in the object
+	            cfg.configure("hibernate.cfg.xml");
+	            
+	            // create factory
+	            SessionFactory factory = cfg.buildSessionFactory();
+	            
+	            return factory;
+	        	
+	        }catch (Exception e) {
 	            // Make sure you log the exception, as it might be swallowed
-	            System.out.println("Initial SessionFactory creation failed." + e);
+	        	 System.err.println("Initial SessionFactory creation failed." + e);
+	             throw new ExceptionInInitializerError(e);
 	        }
-			return null;
 	    }
 	  
 	    public static SessionFactory getSessionFactory() {

@@ -7,11 +7,10 @@ import java.util.Locale.Category;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
-import com.revature.Utils.HibernateUtil;
 import com.revature.model.Employee;
+import com.revature.utils.HibernateUtil;
 
 public class EmployeeDAOImpl implements EmployeeDAO {
-	private static String hql = null;
 	Session sesh = null;
 	
 	@Override
