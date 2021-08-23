@@ -22,7 +22,7 @@ public class ViewForUpdate extends HttpServlet{
 		RequestDispatcher rd = request.getRequestDispatcher("viewall2.html");
 		rd.include(request, response);
 		
-		out.println("<form action='update' method=''>");
+		out.println("<form action='viewupdate' method='POST'>");
 		out.println("<table class='table' border=1 width=50% height=50%>");
 out.println("<tr><th>Employee ID</th><th>Employee Name</th><th>Employee Email</th><th>Employee Gender</th><th>Employee Country</th><th>Update</th></tr>"); 
 			

@@ -30,12 +30,13 @@ public class EmployeeDAOImpl implements EmployeeDAO{
     }
     @Override
     public void updateEmployee(Employee employee) throws SQLException {
-        String sql = "update employee set name = ?, email = ?,phone = ? where id = ?";
+        String sql = "update employee set name = ?, email = ?,gender = ?,country = ? where id = ?";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1, employee.getName());
         preparedStatement.setString(2, employee.getEmail());
-        preparedStatement.setString(3,employee.getPhone());
-        preparedStatement.setInt(4, employee.getId());
+        preparedStatement.setString(3,employee.getGender());
+        preparedStatement.setString(4,employee.getCountry());
+        preparedStatement.setInt(5, employee.getId());
         int count = preparedStatement.executeUpdate();
         if(count > 0) {
             System.out.println("employee updated");
@@ -92,8 +93,9 @@ public class EmployeeDAOImpl implements EmployeeDAO{
             int eID = resultSet.getInt("id");
             String name = resultSet.getString("name");
             String email = resultSet.getString("email");
-            String phone = resultSet.getString("phone");
-            employee = new Employee(id,name,email,phone);
+            String gender = resultSet.getString("gender");
+            String country = resultSet.getString("country");
+            employee = new Employee(id,name,email,gender,country);
         }
         return employee;
     }

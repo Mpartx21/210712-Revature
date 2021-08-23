@@ -22,7 +22,7 @@ public class ViewForDelete extends HttpServlet{
 		RequestDispatcher rd = request.getRequestDispatcher("viewall2.html");
 		rd.include(request, response);
 		
-		out.println("<form action='delete' method=''>");
+		out.println("<form action='delete' method='GET'>");
 		out.println("<table class='table' border=1 width=50% height=50%>");
 out.println("<tr><th>Employee ID</th><th>Employee Name</th><th>Employee Email</th><th>Employee Gender</th><th>Employee Country</th><th>Delete</th></tr>"); 
 			

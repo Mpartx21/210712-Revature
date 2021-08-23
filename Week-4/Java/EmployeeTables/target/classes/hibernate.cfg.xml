@@ -12,10 +12,8 @@
 			<property name="connection.password">password</property>	
 			<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>	
 			<property name="hbm2ddl.auto">update</property>	
-			<property name="show_sql">true</property>
-			<mapping class="com.revature.hibernate_demo_app.ex1.Employee"/>
-			<mapping class="com.revature.hibernate_demo_app.ex2.Employee"/>
-			<mapping class="com.revature.hibernate_demo_app.ex2.Address"/>				
+			<property name="show_sql">true</property>	
+			<mapping class="src/main/java/com/revature/model/Employee"></mapping>		
 
 		</session-factory>
 	</hibernate-configuration>
