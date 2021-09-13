@@ -1,0 +1,115 @@
+steps to grocery app
+- make components 
+*subCategory
+-make service data 
+- navbar bootstrap
+-Home component will contain navbar header category 
+-home will be in app.component
+-data service make getCategory 
+-data service will have 
+private ENDPOINTS = 
+{CATEGORY_URL: apolis-grocery.herokuapp.com/api/category
+ PRODUCT_URL:''
+ SUB_CATEGORY:''
+  REGISTER_URL:''
+  LOGIN_URL:''
+  ORDER_URL:''}
+ also getCategory return this.http.get<any>(this.ENDPOINTS.CATEGORY_URL);
+											  
+-add comments wherever possible
+-import HttpClientModule in ng 
+-app.component will have DataService in constructor 
+-public category :any
+
+-ngOnInit-this.dataService.getCategory().subscribe((data)=>{
+
+-category.html h1 category|json
+-get a card for ^ 
+-^ ngFor let category of categories
+-^h5 category.catName
+-^ image src IMAGE_URL + category.catImage
+div.card button=> (click) = onCategorySelected(category:any){
+this.router.navigate(['products',category.catID])
+-^import{Router} from '@anguler/router'
+
+-dataService public IMAGE_URL = rjtmobile.com/grocery/images
+
+-^getSubCategoryByCatId(catID: number){
+return this.http.get(this.ENDPOINTS.SUB_CATEGORY)+CATid;
+}
+-^getProductsBySubId(subID: number){
+return this.http.get(this.ENDPOINTS.PRODUCT_URL)+CATid;
+}
+
+-header jumbotron
+
+-product component
+-^public catID:number =1;
+-^public subCategory: any 
+-^public subCat:number= 1;
+-^ constructor dataService
+ngOnInit()void:{this.dataService.getSubCategoryByCatId(this.catID).subscribe(
+data => this.subCategory = data
+-^html div.container>div.row>div.col.lg.3>h3--sub category>ul.list-group>
+li.list-group-item ng let sub of subCategory>
+div.col-lg-9>h3.text-center --All Products>div.row>div.col-sm-6 ngFor let product of products>
+div.card>img src="{{IMAGE_URL + product.image}}"div.card-body>h5.card-title --{{product.productName}}
+>h1 --{{product.price | currencty}}span>del>{{}}
+ 
+ -subCategory
+ -^html navbar header products
+ constructor(private dataService:DataService){}
+ -^ public subCategory : any = {}
+ ngOnInit(): void{
+ this.dataService.getSubCategoryByCatId(1).subscribe((data) =>{
+ this.subCategory = data.data;
+ 
+ -app module import {AppRoutingModule}
+ 
+ 
+ -app-routing.module.ts
+ -^import{NgModule} from '@angular/core'
+ import{Routes, RouterModule} from '@angular/router';
+ const routes:routes=[
+ {path:'' , component:HomeComponent},
+ {path: '/prodcuts', component: ProductsComponent}
+ 
+ ngModule({
+ imports:[RouterModule.forRoot(routes)]
+ exports:[RouterModule])}
+ 
+ ----------------------------------------------------------------------------------------------
+ 
+ 
+ 
+ products component
+ -^import {ActivatedRoute} from '@angular/router'
+ -^add to constructor ^
+ -^ this.catId = parseInt(this.route.snapshot.paramMasp.get('catId'))
+ -^THIS	
+ -^#userForm="ngForm"
+ h1 userFrom.value | json   
+ for every element which we want to angular to track we have to add
+ a ngModel
+ 
+ product ts
+ -^onSubCategorySelected(sub:any){
+ this.dataService}
+ -^catName = this.route.snapshot.paramMasp.get('catName')
+ 
+ api/products/cat/catID=PRODUCT_BY_CAT_URL //PRODUCT_BY_SUB_URL
+ 
+ 
+ -path 
+ 
+ ng g c component/register
+ 
+ div.container>h2>form>
+ div.form-group>label-firstname>input.form-control>*4
+ div.form-group>label-city>selecct.form-control>option *NgFor ="let country of countryies{{country}}>
+ div.form-group>label-gender>div.form-check>input.form-check-input>*2
+ -^CHECKBOX
+ 
+ app.Module
+ import{FormsModule}from '@angular/forms';
+ 

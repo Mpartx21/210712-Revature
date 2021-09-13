@@ -1,8 +1,8 @@
-package com.revature.withAngular.repo;
+package com.revature.withAngular.services;
 
 import com.revature.withAngular.exceptions.UserNotFoundException;
 import com.revature.withAngular.model.Employee;
-import com.revature.withAngular.services.EmployeeRepo;
+import com.revature.withAngular.repo.EmployeeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<style>
+     td:nth-child(odd){
+        background-color: red; 
+    }
+    td:nth-child(even){
+        background-color: blue;
+    }
+</style>
+</head>
+<body>
+    
+        <table class="table " id="hideTable">
+            <thead  class="">
+                <th>id</th>
+                <th>name</th>
+                <th>email</th>
+                <th>age</th>
+            </thead>
+            <tbody>
+                <tr class="">
+                    <td>info</td>
+                    <td>info</td>
+                    <td>info</td>
+                    <td>info</td>
+                </tr>
+                <tr>
+                    <td>info</td>
+                    <td>info</td>
+                    <td>info</td>
+                    <td>info</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button onclick="hideShow()">Show/Hide</button>
+    
+    <script>
+        function hideShow(){
+            var tab = document.getElementById("hideTable");
+            if(tab.style.display ==="none"){
+                tab.style.display = "block";
+           }else{
+                tab.style.display = "none";
+            }
+        }
+
+    </script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+</html>

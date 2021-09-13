@@ -26,7 +26,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 
     @Override
     public Employee fetchEmployeeById(long employeeId) {
-     Optional<Employee> employee = repository.findAllById(employeeId);
+     Optional<Employee> employee = repository.findById(employeeId);
      if(!employee.isPresent()){
          System.out.println("employee id does not exists");
      }
@@ -35,7 +35,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 
     @Override
     public void deleteEmployeeById(long employeeId) {
-        repository.delete(employeeId);
+        repository.deleteById(employeeId);
     }
 
     @Override
@@ -50,6 +50,11 @@ public class EmployeeServiceImpl implements EmployeeService{
         if(Objects.nonNull(employee.getEmployeeName()) && !"".equalsIgnoreCase(employee.getEmployeeName())){
             employeedb.setEmployeeName(employee.getEmployeeName());
         }
+        return repository.save(employeedb);
+    }
 
+    @Override
+    public Employee fetchEmployeeByName(String employeeName) {
+        return repository.findByEmployeeName(employeeName);
     }
 }

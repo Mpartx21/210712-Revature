@@ -1,6 +1,7 @@
-package com.revature.withAngular.repo;
+package com.revature.withAngular.exceptions;
 
-public class UserNotFoundException extends Exception {
-    public UserNotFoundException(Object p0) {
+public class UserNotFoundException extends RuntimeException {
+    public UserNotFoundException(String message) {
+    super(message);
     }
 }

@@ -1,0 +1,62 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  
+  <servlet>
+ 	<servlet-class>AddNoteServlet</servlet-class> 
+ 	<servlet-name>AddNoteServlet</servlet-name>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AddNoteServlet</servlet-name>
+  	<url-pattern>/AddNoteServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+ 	<servlet-class>UpdateNoteServlet</servlet-class> 
+ 	<servlet-name>UpdateNoteServlet</servlet-name>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UpdateNoteServlet</servlet-name>
+  	<url-pattern>/UpdateNoteServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+ 	<servlet-class>DeleteServlet</servlet-class> 
+ 	<servlet-name>DeleteServlet</servlet-name>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DeleteServlet</servlet-name>
+  	<url-pattern>/DeleteServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 
+  <servlet>
+ 	<servlet-class></servlet-class> 
+ 	<servlet-name></servlet-name>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name></servlet-name>
+  	<url-pattern></url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+ 	<servlet-class></servlet-class> 
+ 	<servlet-name></servlet-name>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name></servlet-name>
+  	<url-pattern></url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+ 	<servlet-class></servlet-class> 
+ 	<servlet-name></servlet-name>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name></servlet-name>
+  	<url-pattern></url-pattern>
+  </servlet-mapping>
+   -->
+</web-app>

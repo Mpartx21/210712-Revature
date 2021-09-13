@@ -1,4 +1,4 @@
-package com.revature.withAngular.services;
+package com.revature.withAngular.repo;
 
 import com.revature.withAngular.model.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
