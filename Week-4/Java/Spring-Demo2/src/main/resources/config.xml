@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd"
+       >
+
+    <bean name="student1" class="com.revature.Student">
+        <!-- collaborators and configuration for this bean go here -->
+        <property name="studentID">
+            <value>100</value>
+        </property>
+        <property name="studentName">
+            <value>Makrtk asdkjlf</value>
+        </property>
+        <property name="studentAddress">
+            <value>USA</value>
+        </property>
+    </bean>
+
+    <bean class="com.revature.Student" name="student00">
+        <!-- collaborators and configuration for this bean go here -->
+        <property name="studentID">
+            <value>4567</value>
+        </property>
+        <property name="studentName">
+            <value>adfas asdkjlf</value>
+        </property>
+        <property name="studentAddress">
+            <value>JPN</value>
+        </property>
+    </bean>
+
+<!--     First Bean   -->
+        <bean class="com.revature.Employee" name="employee2" init-method="init" destroy-method="destroy">
+            <property name="name" value="Mark"/>
+        </bean>
+
+    <bean class="com.revature.Student" name="student12" >
+        <property name="name" value="Paul"/>
+    </bean>
+
+    <!-- more bean definitions go here -->
+
+    <bean class="com.revature.Student" name="student3" p:studentId="300" p:studentName="Watson" p:studentAddress="UAE"/>
+
+    <bean class="com.revature.Employee" name="employee1">
+        <property name="name" value="Mark"/>
+        <property name="phones">
+            <list>
+                <value>9999</value>
+                <value>8888</value>
+                <value>7777</value>
+            </list>
+        </property>
+
+        <property name="addresses">
+            <set>
+                <value>USA</value>
+                <value>UK</value>
+                <value>UAE</value>
+            </set>
+        </property>
+
+        <property name="departments">
+            <map>
+                <entry key="admin" value="usa" />
+                <entry key="sales" value="uk" />
+                <entry key="purchase" value="uae" />
+            </map>
+        </property>
+    </bean>
+
+</beans>
