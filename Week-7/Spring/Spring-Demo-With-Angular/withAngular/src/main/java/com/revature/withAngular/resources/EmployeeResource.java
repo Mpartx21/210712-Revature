@@ -1,4 +1,4 @@
-package com.revature.withAngular;
+package com.revature.withAngular.resources;
 
 import com.revature.withAngular.model.Employee;
 import com.revature.withAngular.services.EmployeeService;

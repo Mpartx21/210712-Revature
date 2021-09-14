@@ -9,7 +9,7 @@ public class Employee implements Serializable {
     //Serializable it helps transform java class in to different types of
     //stream so its always helps with converting to JSON and frontend
     //Here for all database entries we do not need the id and the employeeCode since
-    //The employee code will be generated on the fly 
+    //The employee code will be generated on the fly
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false,updatable = false)
