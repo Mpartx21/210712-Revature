@@ -55,7 +55,7 @@ export class AppComponent implements OnInit{
         (response: Employee) =>{
           console.log(response);
           this.getEmployees();},
-        (error: HttpErrorResponse) =>{alert(error.message);}):
+        (error: HttpErrorResponse) =>{alert(error.message);});
       }
 
 
